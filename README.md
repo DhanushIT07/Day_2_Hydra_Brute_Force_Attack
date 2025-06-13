@@ -34,8 +34,7 @@ Welcome to the SOC (Security Operations Center) Lab repository. This is a hands-
 
 👤 Author
 Dhanush A  
-Final Year Student – Cybersecurity Enthusiast  
-[LinkedIn Profile](#) *(Add yours)*
+CIT Graduate CyberSecurity and SOC Enthusiast
 
 
 
