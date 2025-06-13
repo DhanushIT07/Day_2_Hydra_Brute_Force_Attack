@@ -1,0 +1,48 @@
+🔒 Day 2: SSH Brute Force Attack using Hydra
+
+🧪 Objective
+To perform a brute force attack on an SSH-enabled Ubuntu server using Hydra and analyze the SSH service using Nmap and Wireshark.
+
+---
+
+### 🔧 Tools Used
+- Hydra v9.5
+- Kali Linux (Attacker)
+- Ubuntu Server (Victim)
+- pfSense (Firewall)
+- Wireshark (Analyzer)
+- rockyou.txt (Wordlist)
+
+---
+
+### ⚙️ Command Executed
+
+```bash
+hydra -l root -P /usr/share/wordlists/rockyou.txt -o hydra-output.txt ssh://192.168.1.110
+## To test the output
+hydra -l root -P small.txt -o test-output.txt ssh://192.168.1.110
+
+🔍 Wireshark Analysis
+Observed SSH handshakes and cipher exchange
+
+Flag RST, ACK noticed when connection was forcefully closed
+
+Verified SSH banner: OpenSSH_9.6p1 Ubuntu
+
+----------------
+🧠 Learnings
+Hydra usage and command syntax
+
+SSH brute-force basics
+
+Wireshark traffic inspection for SSH
+
+Identified that SSH on victim may require PasswordAuthentication yes
+
+---------------------
+📄 Output Summary
+Hydra attempted multiple combinations from rockyou.txt
+
+No password match found
+
+SSH server responded but password login possibly disabled or not matched
